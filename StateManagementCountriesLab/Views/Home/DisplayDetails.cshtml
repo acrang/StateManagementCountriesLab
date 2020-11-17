@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayDetails";
+}
+
+@{
+    Country country = (Country)TempData.Peek("SelectedCountry");
+}
+
+<h1>Country Information:</h1>
+
+<p>Name: @country.Name</p>
+<p>Language: @country.Language</p>
+<p>Greeting: @country.Greeting</p>
+<p>
+    Colors:
+    @foreach (string color in country.Colors)
+    {
+        @color
+    }
+</p>

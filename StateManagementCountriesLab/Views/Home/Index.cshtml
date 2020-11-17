@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Country
+
+<h1>Select a Country</h1>
+
+<form asp-action="DisplayDescription" method="post">
+    <p>
+        <select id="Country" name="Country">
+            <option value="" disabled selected hidden>Country</option>
+            <option value="0">Finland</option>
+            <option value="1">Russia</option>
+            <option value="2">Mauritania</option>
+            <option value="3">Canada</option>
+            <option value="4">Sealand</option>
+        </select>
+    </p>
+    <input type="submit" value="Select Country" />
+</form>
